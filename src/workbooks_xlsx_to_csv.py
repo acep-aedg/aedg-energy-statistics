@@ -7,39 +7,42 @@ def read_and_clean(file, sheet_name, output_csv):
     
     df_clean.to_csv(output_csv, index=False)
 
+financial_url = 'https://github.com/acep-uaf/ak-energy-statistics-2011_2021/raw/refs/heads/topical-tables-to-csv/workbooks/Energy_Stats_Financial_Tables.xlsx'
+generation_url = 'https://github.com/acep-uaf/ak-energy-statistics-2011_2021/raw/refs/heads/topical-tables-to-csv/workbooks/Energy_Stats_Generation_Tables.xlsx'
+infrastructure_url = 'https://github.com/acep-uaf/ak-energy-statistics-2011_2021/raw/refs/heads/topical-tables-to-csv/workbooks/Energy_Stats_Infrastructure_2021.xlsx'
 
 read_and_clean(
-    file='workbooks/Energy_Stats_Financial_Tables.xlsx',
+    file=financial_url,
     sheet_name='Annual Sales FINAL 06262023',
-    output_csv='workbooks_csv/annual_sales.csv'
+    output_csv='data/annual_sales.csv'
 )
 
 read_and_clean(
-    file='workbooks/Energy_Stats_Generation_Tables.xlsx',
+    file=generation_url,
     sheet_name='AnnualOperationsData 2023-11-13',
-    output_csv='workbooks_csv/annual_operations.csv'
+    output_csv='data/annual_operations.csv'
 )
 
 read_and_clean(
-    file='workbooks/Energy_Stats_Generation_Tables.xlsx',
+    file=generation_url,
     sheet_name='Monthly Gen 2001-2021',
-    output_csv='workbooks_csv/monthly_generation.csv'
+    output_csv='data/monthly_generation.csv'
 )
 
 read_and_clean(
-    file='workbooks/Energy_Stats_Infrastructure_2021.xlsx',
+    file=infrastructure_url,
     sheet_name='LOOKUP INTERTIES 2023-11-08',
-    output_csv='workbooks_csv/interties.csv'
+    output_csv='data/interties.csv'
 )
 
 read_and_clean(
-    file='workbooks/Energy_Stats_Infrastructure_2021.xlsx',
+    file=infrastructure_url,
     sheet_name='Infrastructure FINAL 2023-11-13',
-    output_csv='workbooks_csv/infrastructure.csv'
+    output_csv='data/infrastructure.csv'
 )
 
 read_and_clean(
-    file='workbooks/Energy_Stats_Infrastructure_2021.xlsx',
+    file=infrastructure_url,
     sheet_name='LOOKUP PLANTS 2023-11-13',
-    output_csv='workbooks_csv/plants.csv'
+    output_csv='data/plants.csv'
 )
