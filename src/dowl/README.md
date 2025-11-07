@@ -22,27 +22,3 @@ This splits a single sheet in `Energy_Stats_Generation_Tables.xlsx` into two sep
 
 Neil organized his interties by the grids with communities as a list within a single cell. This did not work well with AEDG, so that cell was split into separate rows for each community
 
-## Initialized
-
-Here's how this directory was initialized
-
-```shell
-% uv init
-% uv venv
-% uv add pandas
-% uv uv add openpyxl
-% uv sync
-% source .venv/bin/activate
-```
-
-Then I altered `uv`'s `hello.py` script to become `operators2csv.py`
-
-## Installation and use
-
-`uv sync` will create the `.venv/` directory and it can also include the optional dependencies too.
-
-``` shell
-% uv sync --all-extras  # Include all optional dependencies (which there aren't any of).
-% source .venv/bin/activate
-% python operators2csv.py
-```
