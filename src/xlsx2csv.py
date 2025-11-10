@@ -1,10 +1,12 @@
-"""Script to read Operators and Plants from Excel file and write to CSV files
+"""Script to read lookup tables from Excel file and write to CSV files
 
 source .venv/bin/activate 
-python operators2csv.py
+python xlsx2csv.py
 
 2025-04-17 updated to use "FINAL" workbook which had more tabs (Communities and Sales
 Reporting) but the same data for Operators and Plants (and Interties) 
+
+2025-11-07 moved code to new repo, moved XLSX source to https://github.com/acep-uaf/ak-energy-statistics-2011_2021
 """
 
 from pathlib import Path
@@ -12,10 +14,11 @@ from pathlib import Path
 import pandas as pd
 
 def main():
-    print("Hello from dowl!")
+    print("Downloading XLSX lookup tables and saving to CSV")
 
-    filename = "AEDG LOOKUP TABLES_FINAL.xlsx"
-    data_dir = Path(__file__).parents[2] / "data" / "raw" / "dowl"
+    url = "https://github.com/acep-aedg/aedg-data-pond/raw/refs/heads/main/data/raw/dowl/AEDG%20LOOKUP%20TABLES_FINAL.xlsx"
+    root_dir = Path.cwd()
+    data_dir = root_dir / "data"
     sheets = {
         "LOOKUP Communities": "lookup_communities_2024-02-23.csv",
         "LOOKUP INTERTIES 2024-02-23": "lookup_interties_2024-02-23.csv",
@@ -86,7 +89,7 @@ def main():
 
         # read
         df = pd.read_excel(
-            data_dir / filename,
+            url,
             sheet_name=sheet
         )
 

@@ -2,7 +2,7 @@
 
 ## Data Deliveries
 
-The first data delivery was `Tables_Operators&Plants_2025-03-10.xlsx` in March 2025. It contained only 2 lookup tables, Operator and Plants, and data dictionaries for both - so 4 sheets altogether. It was not stored in GitHub; it is [in Google Drive](https://docs.google.com/spreadsheets/d/1lBdR9TbwQvxDV1LUW2HGDvdd1C5UQ7mq/edit?usp=drive_link&ouid=112418087891577909150&rtpof=true&sd=true), if you have access to that. Information from the data dictionary was transferred to `data/raw/dowl/raw_dowl_data_dictionary.csv`
+The first data delivery was `Tables_Operators&Plants_2025-03-10.xlsx` in March 2025. It contained only 2 lookup tables, Operator and Plants, and data dictionaries for both - so 4 sheets altogether. It was not stored in GitHub; it is [in Google Drive](https://docs.google.com/spreadsheets/d/1lBdR9TbwQvxDV1LUW2HGDvdd1C5UQ7mq/edit?usp=drive_link&ouid=112418087891577909150&rtpof=true&sd=true), if you have access to that. Information from the data dictionary was transferred to `data_dictionary.csv`
 
 A second data delivery occurred in April, 2025. `AEDG LOOKUP TABLES_FINAL.xlsx` includes Operator, Plants, Communities, Interties, and Sales. It is stored in this repo in `data/raw/dowl` with CSV files derived from its sheets.
 
@@ -10,7 +10,7 @@ Two additional lookup tables - EIA fuel codes and prime mover codes - were not i
 
 ## Scripts
 
-### operator2.csv.py
+### xlsx2csv.py
 
 This converts each tab in `AEDG LOOKUP TABLES_FINAL.xlsx` to pandas DataFrames and then outputs them to individual CSV files that where then used to generate metadata. Several ID codes in the tables were cast to floats because fields with missing values cannot be integers. But some have leading zeros so might have been better treated as strings. If these data are used in the future, it might be better to work from the original XLSX file.
 

@@ -108,9 +108,11 @@ def build_grids(df, events):
 
 
 def main():
-    print("Hello from dowl!")
+    print("Converting interties to AEDG grid format")
+    
+    root_dir = Path.cwd()
+    data_dir = root_dir / "data"
 
-    data_dir = Path(__file__).parents[2] / "data" / "raw" / "dowl"
     infile = "lookup_interties_2024-02-23.csv"
     outfile = "lookup_grids_2025-04-17.csv"
 
