@@ -9,11 +9,14 @@ from pathlib import Path
 import pandas as pd
 
 def main():
-    print("Hello from dowl!")
+    print("Moving Prime Mover and Fuel Type codes from workbook XLSX to CSV")
 
     url = "https://github.com/acep-uaf/ak-energy-statistics-2011_2021/raw/refs/heads/main/workbooks/Energy_Stats_Generation_Tables.xlsx"
     # alternate name: url = "/Users/eldobbins/Desktop/projects/energy stats/Stats data gen fin infr sent 2025/Energy Stats--Generation Tables.xlsx"
-    data_dir = Path(__file__).parents[2] / "data" / "raw" / "dowl"
+    
+    root_dir = Path.cwd()
+    data_dir = root_dir / "data"
+
     sheet = "LOOKUP Code tables"
 
 

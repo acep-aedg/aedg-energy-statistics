@@ -3,7 +3,7 @@
 source .venv/bin/activate 
 python interties2csv.py
 
-2025-04-17: use operators2csv.py instead
+2025-04-17: use xlsx2csv.py instead
 Early version used a previously delivered version that was posted with the 
 Energy Statistics workbooks in GitHub. A later delivery included Interties
 (unchanged values) with the Operators and Plants (and Sales Reporting and Communities).
@@ -14,10 +14,10 @@ from pathlib import Path
 import pandas as pd
 
 def main():
-    print("Hello from dowl!")
+    print("Writing grids from XLSX to CSV")
 
     url = "https://github.com/acep-uaf/ak-energy-statistics-2011_2021/raw/refs/heads/main/workbooks/Energy_Stats_Infrastructure_2021.xlsx"
-    data_dir = Path(__file__).parents[2] / "data" / "raw" / "dowl"
+    data_dir = Path(__file__).parents[2] / "data"
     sheets = {
         "LOOKUP INTERTIES 2023-11-08": "lookup_interties_2023-11-08.csv"
     }

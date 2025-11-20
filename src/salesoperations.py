@@ -14,35 +14,35 @@ infrastructure_url = 'https://github.com/acep-uaf/ak-energy-statistics-2011_2021
 read_and_clean(
     file=financial_url,
     sheet_name='Annual Sales FINAL 06262023',
-    output_csv='data/annual_sales.csv'
+    output_csv='data/annual_sales_2023-06-26.csv'
 )
 
 read_and_clean(
     file=generation_url,
     sheet_name='AnnualOperationsData 2023-11-13',
-    output_csv='data/annual_operations.csv'
+    output_csv='data/annual_operations_2023-11-13.csv'
 )
 
 read_and_clean(
     file=generation_url,
     sheet_name='Monthly Gen 2001-2021',
-    output_csv='data/monthly_generation.csv'
-)
-
-read_and_clean(
-    file=infrastructure_url,
-    sheet_name='LOOKUP INTERTIES 2023-11-08',
-    output_csv='data/interties.csv'
+    output_csv='data/monthly_generation_2001-2021.csv'
 )
 
 read_and_clean(
     file=infrastructure_url,
     sheet_name='Infrastructure FINAL 2023-11-13',
-    output_csv='data/infrastructure.csv'
+    output_csv='data/infrastructure_2023-11-13.csv'
 )
 
 read_and_clean(
     file=infrastructure_url,
     sheet_name='LOOKUP PLANTS 2023-11-13',
-    output_csv='data/plants.csv'
+    output_csv='data/deprecated/plants.csv'
+)
+
+read_and_clean(
+    file=infrastructure_url,
+    sheet_name='LOOKUP INTERTIES 2023-11-08',
+    output_csv='data/deprecated/interties.csv'
 )
