@@ -1,4 +1,4 @@
--e git+https://github.com/acep-aedg/aedg-metadata.git@c6d3aa7f3a914c1b2d540a35345fde60106cd664#egg=aedg_metadata
+-e git+https://github.com/acep-aedg/aedg-metadata.git@f24644be39c2550f801b944ec3360773cdc7b70e#egg=aedg_metadata
 attrs==25.4.0
 certifi==2025.11.12
 click==8.3.1
