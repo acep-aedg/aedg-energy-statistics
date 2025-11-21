@@ -16,7 +16,7 @@ import pandas as pd
 def main():
     print("Downloading XLSX lookup tables and saving to CSV")
 
-    url = "https://github.com/acep-aedg/aedg-data-pond/raw/refs/heads/main/data/raw/dowl/AEDG%20LOOKUP%20TABLES_FINAL.xlsx"
+    url = "https://github.com/acep-uaf/ak-energy-statistics-2011_2021/raw/refs/heads/main/workbooks/AEDG_Lookup_Tables_Final.xlsx"
     root_dir = Path.cwd()
     data_dir = root_dir / "data"
     sheets = {
@@ -97,14 +97,15 @@ def main():
         df.rename(columns=renames, inplace=True)
 
         # write
-        df.to_csv(
-            data_dir / outname,
-            index=False
-        )
+        outdir = Path(outname).stem
+        this_output_dir = data_dir / outdir
+        this_output_dir.mkdir(exist_ok=True)
+
+        df.to_csv(this_output_dir / outname, index=False)
 
         # for the data dictionary
-        for col in df.columns:
-            print(col, outname)
+        # for col in df.columns:
+        #     print(col, outname)
 
 
 if __name__ == "__main__":
