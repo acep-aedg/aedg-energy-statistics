@@ -5,7 +5,7 @@ resource:
     A lookup table to cross reference reporters of electricity sales for EIA and PCE data sources.
   description: | # Description of what this dataset is and what it is doing here
     This lookup table cross references entities that report electricity sales to sources of electricity generation data: the U.S. Energy Information Administration (EIA) and the State of Alaska's Power Cost Equalization (PCE) program. Sales information from PCE is generally community based; this is different from sales information from EIA, which is utility based. This is further complicated by the fact that several utilities (AVEC, AP&T, IPEC, and MKEC) own operations in multiple communities. A sales reporter unique identifier was created to combine data from these two sources and associate it with electrical grids. This table was manually created and extended with publicly available information.
-  path: "https://raw.githubusercontent.com/acep-aedg/aedg-data-pond/refs/heads/main/data/raw/dowl/lookup_salesreport_2025-03-03.csv" # link to dataset in GitHub
+  path: "https://raw.githubusercontent.com/acep-aedg/aedg-energy-statistics/refs/heads/main/data/lookup_salesreport_2025-03-03/lookup_salesreport_2025-03-03.csv" # link to dataset in GitHub
   keywords: # list of keywords and short phrases
     - lookup
     - PCE
@@ -18,11 +18,14 @@ resource:
   publisher: acep
   licenses: # list of keys in the license.yml registry
     - CC-BY-4.0
+  temporal:
+    referenceDate: "2025-03-03"  # equivalent to as_of_date
+    timeseries: null # is a list of possibly multiple time periods
   primaryKey: # list of the fields that uniquely identifies each row in the table. Fields harvested from posted file.
     - sales_reporting_id
   contributors:
     - title: Neil McMahon
-      organization: dowl
+      organization: acep
       roles:
         - DataCollector
       date: 2025-03-03
