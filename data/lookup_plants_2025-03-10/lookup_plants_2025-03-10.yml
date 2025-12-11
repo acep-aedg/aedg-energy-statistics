@@ -5,7 +5,7 @@ resource:
     A lookup table to cross reference power plant IDs from EIA and PCE data sources.
   description: | # Description of what this dataset is and what it is doing here
     This lookup table cross references power plant IDs between sources of generation data: the U.S. Energy Information Administration (EIA) and the State of Alaska's Power Cost Equalization (PCE) program. Unless a utility/operator reports to the EIA, plants are not strictly identified. This makes it difficult to aggregate generation across a grid and/or the state. In this table, each plant is uniquely identified according to where the operator reports (PCE or EIA) and the intertie to which it provides power. This table was manually created by comparing the plant names, and extended with publicly available information.
-  path: "https://raw.githubusercontent.com/acep-aedg/aedg-data-pond/refs/heads/main/data/raw/dowl/lookup_plants_2025-03-10.csv" # link to dataset in GitHub
+  path: "https://raw.githubusercontent.com/acep-aedg/aedg-energy-statistics/refs/heads/main/data/lookup_plants_2025-03-10/lookup_plants_2025-03-10.csv" # link to dataset in GitHub
   keywords: # list of keywords and short phrases
     - lookup
     - PCE
@@ -17,11 +17,14 @@ resource:
   publisher: acep
   licenses: # list of keys in the license.yml registry
     - CC-BY-4.0
+  temporal:
+    referenceDate: "2025-03-10"  # equivalent to as_of_date
+    timeseries: null # is a list of possibly multiple time periods
   primaryKey: # list of the fields that uniquely identifies each row in the table. Fields harvested from posted file.
     - ak_plant_id
   contributors:
     - title: Neil McMahon
-      organization: dowl
+      organization: acep
       roles:
         - DataCollector
       date: 2025-03-10

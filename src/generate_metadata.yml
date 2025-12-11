@@ -1,0 +1,33 @@
+# This is the configuration file for the metadata generation script generate_metadata.sh
+
+datasets:
+
+  lookup_communities_2024-02-23:
+    data_path: data/lookup_communities_2024-02-23/lookup_communities_2024-02-23.csv
+    data_dictionary: lookup_data_dictionary.csv
+    bbox: infer
+    time: specify
+
+  lookup_interties_2024-02-23:
+    data_path: data/lookup_interties_2024-02-23/lookup_interties_2024-02-23.csv
+    data_dictionary: lookup_data_dictionary.csv
+    bbox: infer
+    time: specify
+
+  lookup_operator_2025-03-07:
+    data_path: data/lookup_operator_2025-03-07/lookup_operator_2025-03-07.csv
+    data_dictionary: lookup_data_dictionary.csv
+    bbox: infer
+    time: specify
+
+  lookup_plants_2025-03-10:
+    data_path: data/lookup_plants_2025-03-10/lookup_plants_2025-03-10.csv
+    data_dictionary: lookup_data_dictionary.csv
+    bbox: infer
+    time: specify
+
+  lookup_salesreport_2025-03-03:
+    data_path: data/lookup_salesreport_2025-03-03/lookup_salesreport_2025-03-03.csv
+    data_dictionary: lookup_data_dictionary.csv
+    bbox: infer
+    time: specify
