@@ -21,6 +21,13 @@ def read_and_clean(file, sheet_name, outname):
 financial_url = 'https://github.com/acep-uaf/ak-energy-statistics-2011_2021/raw/refs/heads/topical-tables-to-csv/workbooks/Energy_Stats_Financial_Tables.xlsx'
 generation_url = 'https://github.com/acep-uaf/ak-energy-statistics-2011_2021/raw/refs/heads/topical-tables-to-csv/workbooks/Energy_Stats_Generation_Tables.xlsx'
 infrastructure_url = 'https://github.com/acep-uaf/ak-energy-statistics-2011_2021/raw/refs/heads/topical-tables-to-csv/workbooks/Energy_Stats_Infrastructure_2021.xlsx'
+monthly_sales_url = 'https://github.com/acep-uaf/ak-energy-statistics-2011_2021/raw/refs/heads/ian/add-monthly-sales-data/workbooks/sales_monthly_pce_eia_consolidated.xlsx'
+
+read_and_clean(
+    file=monthly_sales_url,
+    sheet_name='Monthly Sales FINAL',
+    outname='monthly_sales.csv'
+)
 
 read_and_clean(
     file=financial_url,
